@@ -67,7 +67,7 @@ chris.borer@gmail.com
     
  git hub
 * GitHub: https://github.com/cspower5/ecommerce-backend
-* GitHub: https://cspower5.github.io/content_management_systems/
+* GitHub: https://cspower5.github.io/ecommerce-backend/
     
 
 
