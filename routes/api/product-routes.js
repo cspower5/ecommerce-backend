@@ -43,7 +43,7 @@ router.get('/:id', async (req, res) => {
         attributes:['id', 'tag_name']
       }]
       });
-      if (!Product) {
+      if (!prodMd) {
         res.status(404).json({
           message: 'Product with id ' + req.params.id + ' not found!'
         });

@@ -35,11 +35,12 @@ router.get('/:id', async (req, res) => {
     if(!catMd) {
       res.status(404).json({
        message: 'Category with id ' + req.params.id +  ' not found!' 
-      })
+      });
+      return;
     }
-    res.status(200).json(catMd);
+  res.status(200).json(catMd);
   }catch(err) {
-    res.status(500).json(err); 
+  res.status(500).json(err); 
   }
 });
 
