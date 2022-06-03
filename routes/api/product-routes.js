@@ -43,9 +43,9 @@ router.get('/:id', async (req, res) => {
         attributes:['id', 'tag_name']
       }]
       });
-      if (!productDB) {
+      if (!Product) {
         res.status(404).json({
-          message: 'Product with id' + req.params.id + ' not found!'
+          message: 'Product with id ' + req.params.id + ' not found!'
         });
         return;
       }
@@ -113,7 +113,7 @@ router.put('/:id', (req, res) => {
           };
         });
       // figure out which ones to remove
-      const prodTagsToRemove = productTags
+      const prodTagsToRemove = ProductTags
         .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
         .map(({ id }) => id);
 
@@ -141,7 +141,7 @@ router.delete('/:id', async (req, res) => {
 
     if (!prodMd) {
       res.status(404).json({
-        message: 'No Product found with this id!'
+        message: 'Product with id ' + req.params.id + ' not found!'
       });
       return;
     }
